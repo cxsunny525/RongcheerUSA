@@ -87,10 +87,10 @@ h1 em,h2 em{font-style:normal;background:linear-gradient(90deg,#7fb2ff,var(--cya
 #p3{background:linear-gradient(180deg,var(--navy),var(--ink))}
 .rail{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;margin:28px -22px 0;padding:4px 22px 14px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
 .rail::-webkit-scrollbar{display:none}
-.card{flex:0 0 76%;scroll-snap-align:start;background:linear-gradient(160deg,#13213f,#0c162b);border:1px solid var(--line);border-radius:20px;padding:24px 22px 26px;position:relative;min-height:250px}
+.card{flex:0 0 80%;scroll-snap-align:start;background:linear-gradient(160deg,#13213f,#0c162b);border:1px solid var(--line);border-radius:20px;padding:18px 20px 22px;position:relative}
 .card .no{position:absolute;top:22px;right:22px;font-family:var(--mono);font-size:12px;color:var(--muted)}
-.card .ico{width:46px;height:46px;color:var(--cyan)}
-.card h3{font-size:22px;margin:42px 0 8px;letter-spacing:-.01em}
+.card .art{width:100%;max-width:250px;height:auto;display:block;margin:2px auto 4px}
+.card h3{font-size:21px;margin:6px 0 6px;letter-spacing:-.01em}
 .card p{color:var(--muted);font-size:15.5px}
 .hint{font-family:var(--mono);font-size:11px;letter-spacing:.16em;color:var(--muted);margin-top:8px}
 /* technology */
@@ -110,8 +110,8 @@ h1 em,h2 em{font-style:normal;background:linear-gradient(90deg,#7fb2ff,var(--cya
 #p5{background:var(--light);color:var(--dark-text)}
 #p5 .eyebrow{color:var(--blue)}
 .inds{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px}
-.inds li{background:#fff;border:1px solid #dde4ef;border-radius:18px;padding:18px 16px;display:flex;flex-direction:column;gap:12px;font-weight:600;font-size:15.5px;box-shadow:0 1px 0 rgba(14,22,40,.03)}
-.inds .ico{width:34px;height:34px;color:var(--blue)}
+.inds li{background:#fff;border:1px solid #dde4ef;border-radius:18px;padding:12px 12px 14px;display:flex;flex-direction:column;align-items:center;gap:4px;font-weight:600;font-size:15px;text-align:center;box-shadow:0 1px 0 rgba(14,22,40,.03)}
+.inds .ill{width:100%;max-width:116px;height:auto;display:block}
 /* team */
 #p6{background:linear-gradient(180deg,var(--ink),var(--navy))}
 .flow{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:30px;position:relative}
@@ -146,12 +146,11 @@ h1 em,h2 em{font-style:normal;background:linear-gradient(90deg,#7fb2ff,var(--cya
   .hero{grid-template-columns:1.05fr .95fr;align-items:center;gap:40px}
   .hero-svg{width:min(42vw,72vh,540px);margin:0}
   .rail{display:grid;grid-template-columns:repeat(4,1fr);overflow:visible;margin:40px 0 0;padding:0}
-  .card{min-height:300px}
   .hint{display:none}
   .split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
   .machine{width:min(46vw,64vh,600px);margin:0}
   .inds{grid-template-columns:repeat(3,1fr);gap:16px}
-  .inds li{flex-direction:row;align-items:center;padding:24px 22px;font-size:17px}
+  .inds li{padding:18px 18px 20px;font-size:17px}.inds .ill{max-width:150px}
   .stats{grid-template-columns:repeat(4,1fr)}
   .stat:nth-child(n){padding:22px 20px 6px;border-right:1px solid #d5ddea;border-top:0}
   .stat:first-child{padding-left:0}.stat:last-child{border-right:0}
@@ -161,8 +160,8 @@ h1 em,h2 em{font-style:normal;background:linear-gradient(90deg,#7fb2ff,var(--cya
 @media (max-height:700px) and (max-width:899px){
   .page{padding-top:70px;padding-bottom:50px}
   .hero-svg{width:min(64vw,38vh)}
-  .card{min-height:210px}.card h3{margin-top:26px}
-  .stats{margin-top:22px}.inds{gap:9px;margin-top:20px}.inds li{padding:13px 13px;gap:8px}
+  .card .art{max-width:190px}.card h3{font-size:19px}
+  .stats{margin-top:22px}.inds{gap:9px;margin-top:20px}.inds li{padding:8px 8px 10px;gap:2px;font-size:14px}.inds .ill{max-width:84px}
   .hero .btns{margin-top:18px;gap:10px}.hero .btn{padding:11px 15px;font-size:14.5px}
   .machine{width:min(72vw,34vh);margin-top:14px}.tags{gap:6px;margin-top:12px}.tag{padding-top:8px}
 }
@@ -254,22 +253,149 @@ h1 em,h2 em{font-style:normal;background:linear-gradient(90deg,#7fb2ff,var(--cya
       <h2 class="reveal">Four series.<br><em>One line-ready system.</em></h2>
       <div class="rail">
           <article class="card reveal">
-            <span class="no">01</span><svg class="ico" viewBox="0 0 48 48" role="img" aria-label="Metrology" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="14" width="36" height="20" rx="2"/><path d="M12 14v6M18 14v4M24 14v6M30 14v4M36 14v6"/><circle cx="24" cy="27" r="3"/></svg>
+            <span class="no">01</span><svg class="art" viewBox="0 0 160 110" role="img" aria-label="Telecentric camera measuring a machined part" xmlns="http://www.w3.org/2000/svg"><defs>
+ <linearGradient id="me-mt" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f4f6fa"/><stop offset="1" stop-color="#aeb8ca"/></linearGradient>
+ <linearGradient id="me-ml" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#9aa6bb"/><stop offset="1" stop-color="#6e7a91"/></linearGradient>
+ <linearGradient id="me-mr" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5d6880"/><stop offset="1" stop-color="#46516a"/></linearGradient>
+ <linearGradient id="me-cam" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2b3448"/><stop offset=".5" stop-color="#4a556c"/><stop offset="1" stop-color="#1a2236"/></linearGradient>
+ <linearGradient id="me-lens" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5d6880"/><stop offset=".45" stop-color="#d5dbe6"/><stop offset="1" stop-color="#4a556c"/></linearGradient>
+
+ <linearGradient id="me-beam" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6fd3ff" stop-opacity=".55"/><stop offset="1" stop-color="#6fd3ff" stop-opacity=".05"/></linearGradient>
+</defs>
+<ellipse cx="80" cy="104" rx="52" ry="4" fill="#000" opacity=".35"/>
+<path d="M80 50 L36 66 L36 82 L80 98 L124 82 L124 66 Z" fill="none"/>
+<path d="M36 66 L80 80 L80 96 L36 82 Z" fill="url(#me-ml)"/>
+<path d="M80 80 L124 66 L124 82 L80 96 Z" fill="url(#me-mr)"/>
+<path d="M80 52 L124 66 L80 80 L36 66 Z" fill="url(#me-mt)"/>
+<path d="M36 66 L80 80 L124 66" fill="none" stroke="#fff" stroke-opacity=".6" stroke-width=".8"/>
+<ellipse cx="80" cy="66" rx="12" ry="5.6" fill="#2b3448"/>
+<ellipse cx="80" cy="67.2" rx="9" ry="3.8" fill="#11182a"/>
+<path d="M68 66 A12 5.6 0 0 1 92 66" fill="none" stroke="#e6ebf3" stroke-width=".8"/>
+<path d="M71 40 L59 66 L101 66 L89 40 Z" fill="url(#me-beam)"/>
+<g stroke="#6fd3ff" stroke-width="1.1" fill="none"><ellipse cx="80" cy="66" rx="14.5" ry="7"/><path d="M62 66 H98 M80 57 V75" stroke-dasharray="2 2"/></g>
+<g stroke="#e6ebf3" stroke-width=".9" fill="none"><path d="M30 70 L74 84.5"/><path d="M30 66.5 v7 M74 81 v7"/></g>
+<rect x="104" y="30" width="50" height="19" rx="4" fill="#0a1222" stroke="#6fd3ff" stroke-opacity=".8"/>
+<text x="129" y="38" text-anchor="middle" font-size="6.2" fill="#97a3ba" font-family="ui-monospace,Menlo,Consolas,monospace">&#216; 24.000</text>
+<text x="129" y="45.5" text-anchor="middle" font-size="7" font-weight="700" fill="#6fd3ff" font-family="ui-monospace,Menlo,Consolas,monospace">&#177;2 &#181;m</text>
+<path d="M104 44 L92 58" stroke="#6fd3ff" stroke-width=".8"/>
+<rect x="66" y="2" width="28" height="15" rx="2.5" fill="url(#me-cam)"/>
+<rect x="66" y="6" width="28" height="1.6" fill="#3a6fd8"/>
+<rect x="69" y="17" width="22" height="23" rx="1.5" fill="url(#me-lens)"/>
+<g fill="#4a556c"><rect x="69" y="22" width="22" height="1.4"/><rect x="69" y="28" width="22" height="1.4"/><rect x="69" y="34" width="22" height="1.4"/></g>
+<rect x="71" y="39" width="18" height="3" rx="1" fill="#2b3448"/>
+</svg>
             <h3>Metrology</h3>
             <p>Dimensions, flatness and position, measured to the micron.</p>
           </article>
           <article class="card reveal">
-            <span class="no">02</span><svg class="ico" viewBox="0 0 48 48" role="img" aria-label="Inspection" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 14V8h6M36 8h6v6M42 34v6h-6M12 40H6v-6"/><path d="M10 24s5-8 14-8 14 8 14 8-5 8-14 8-14-8-14-8z"/><circle cx="24" cy="24" r="4"/></svg>
+            <span class="no">02</span><svg class="art" viewBox="0 0 160 110" role="img" aria-label="Camera and ring light inspecting a circuit board" xmlns="http://www.w3.org/2000/svg"><defs>
+ <linearGradient id="in-mt" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f4f6fa"/><stop offset="1" stop-color="#aeb8ca"/></linearGradient>
+ <linearGradient id="in-ml" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#9aa6bb"/><stop offset="1" stop-color="#6e7a91"/></linearGradient>
+ <linearGradient id="in-mr" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5d6880"/><stop offset="1" stop-color="#46516a"/></linearGradient>
+ <linearGradient id="in-cam" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2b3448"/><stop offset=".5" stop-color="#4a556c"/><stop offset="1" stop-color="#1a2236"/></linearGradient>
+ <linearGradient id="in-lens" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5d6880"/><stop offset=".45" stop-color="#d5dbe6"/><stop offset="1" stop-color="#4a556c"/></linearGradient>
+
+ <linearGradient id="in-cone" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9fe2ff" stop-opacity=".55"/><stop offset="1" stop-color="#6fd3ff" stop-opacity=".04"/></linearGradient>
+ <linearGradient id="in-ring" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2b3448"/><stop offset=".5" stop-color="#5d6880"/><stop offset="1" stop-color="#1a2236"/></linearGradient>
+ <linearGradient id="in-pcb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2a5bc4"/><stop offset="1" stop-color="#173a86"/></linearGradient>
+ <radialGradient id="in-spot" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#bff0ff" stop-opacity=".55"/><stop offset="1" stop-color="#6fd3ff" stop-opacity="0"/></radialGradient>
+ <filter id="in-glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="1.6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<ellipse cx="80" cy="104" rx="52" ry="4" fill="#000" opacity=".35"/>
+<path d="M56 60 L104 60 L128 88 L32 88 Z" fill="url(#in-cone)"/>
+<path d="M80 72 L126 86 L80 100 L34 86 Z" fill="#0f1a33" transform="translate(0 2.5)"/>
+<path d="M80 72 L126 86 L80 100 L34 86 Z" fill="url(#in-pcb)" stroke="#6f93e0" stroke-width=".7"/>
+<ellipse cx="80" cy="86" rx="40" ry="11" fill="url(#in-spot)"/>
+<g fill="#11182a"><path d="M66 82 L76 85 L70 87 L60 84 Z"/><path d="M84 78 L96 81.6 L90 83.6 L78 80 Z"/><path d="M86 88 L94 90.4 L89 92 L81 89.6 Z"/></g>
+<g fill="#e3c27a"><circle cx="54" cy="88" r="1.1"/><circle cx="58" cy="89.2" r="1.1"/><circle cx="62" cy="90.4" r="1.1"/><circle cx="104" cy="88" r="1.1"/><circle cx="100" cy="89.2" r="1.1"/></g>
+<circle cx="99" cy="84" r="1.6" fill="#ffb86b"/>
+<path d="M93 80 h3 M93 80 v3 M105 80 h-3 M105 80 v3 M93 88 h3 M93 88 v-3 M105 88 h-3 M105 88 v-3" stroke="#ffb86b" stroke-width="1.2" fill="none"/>
+<rect x="110" y="66" width="22" height="10" rx="2.5" fill="#0a1222" stroke="#ffb86b" stroke-opacity=".9"/>
+<text x="121" y="73.4" text-anchor="middle" font-size="6.4" font-weight="700" fill="#ffb86b" font-family="ui-monospace,Menlo,Consolas,monospace">NG</text>
+<path d="M105 80 L110 76" stroke="#ffb86b" stroke-width=".8"/>
+<path d="M43 54 v5 A37 8.6 0 0 0 117 59 v-5" fill="#1a2236"/>
+<path fill-rule="evenodd" fill="url(#in-ring)" d="M43 54 A37 8.6 0 1 0 117 54 A37 8.6 0 1 0 43 54 Z M60 54 A20 4.6 0 1 0 100 54 A20 4.6 0 1 0 60 54 Z"/>
+<rect x="66" y="2" width="28" height="15" rx="2.5" fill="url(#in-cam)"/>
+<rect x="66" y="6" width="28" height="1.6" fill="#3a6fd8"/>
+<rect x="70" y="17" width="20" height="35" rx="1.5" fill="url(#in-lens)"/>
+<g fill="#4a556c"><rect x="70" y="24" width="20" height="1.4"/><rect x="70" y="32" width="20" height="1.4"/><rect x="70" y="40" width="20" height="1.4"/></g>
+<ellipse cx="80" cy="52" rx="10" ry="2.4" fill="#0a0f1c" stroke="#8d99b0" stroke-width=".6"/>
+<g fill="#cdf3ff" filter="url(#in-glow)"><circle cx="117.0" cy="54.0" r="1.6"/><circle cx="114.2" cy="57.3" r="1.6"/><circle cx="106.2" cy="60.1" r="1.6"/><circle cx="94.2" cy="61.9" r="1.6"/><circle cx="80.0" cy="62.6" r="1.6"/><circle cx="65.8" cy="61.9" r="1.6"/><circle cx="53.8" cy="60.1" r="1.6"/><circle cx="45.8" cy="57.3" r="1.6"/><circle cx="43.0" cy="54.0" r="1.6"/></g>
+<path d="M120 56 C132 56 138 48 146 40" stroke="#2b3448" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+</svg>
             <h3>Inspection</h3>
             <p>AI finds cosmetic and assembly defects that people miss.</p>
           </article>
           <article class="card reveal">
-            <span class="no">03</span><svg class="ico" viewBox="0 0 48 48" role="img" aria-label="Function test" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="8" width="36" height="28" rx="3"/><path d="M10 24h6l3-8 5 14 4-10 2 4h8"/><path d="M18 42h12"/></svg>
+            <span class="no">03</span><svg class="art" viewBox="0 0 160 110" role="img" aria-label="Probe test fixture with waveform display" xmlns="http://www.w3.org/2000/svg"><defs>
+ <linearGradient id="ft-mt" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f4f6fa"/><stop offset="1" stop-color="#aeb8ca"/></linearGradient>
+ <linearGradient id="ft-ml" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#9aa6bb"/><stop offset="1" stop-color="#6e7a91"/></linearGradient>
+ <linearGradient id="ft-mr" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5d6880"/><stop offset="1" stop-color="#46516a"/></linearGradient>
+ <linearGradient id="ft-cam" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2b3448"/><stop offset=".5" stop-color="#4a556c"/><stop offset="1" stop-color="#1a2236"/></linearGradient>
+ <linearGradient id="ft-lens" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5d6880"/><stop offset=".45" stop-color="#d5dbe6"/><stop offset="1" stop-color="#4a556c"/></linearGradient>
+
+ <linearGradient id="ft-board" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1f7a5a"/><stop offset="1" stop-color="#0f4a37"/></linearGradient>
+ <linearGradient id="ft-scr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0d1730"/><stop offset="1" stop-color="#070b14"/></linearGradient>
+</defs>
+<ellipse cx="72" cy="104" rx="56" ry="4" fill="#000" opacity=".35"/>
+<path d="M14 84 L62 70 L118 84 L70 98 Z" fill="url(#ft-mt)"/>
+<path d="M14 84 L70 98 L70 104 L14 90 Z" fill="url(#ft-ml)"/>
+<path d="M70 98 L118 84 L118 90 L70 104 Z" fill="url(#ft-mr)"/>
+<path d="M36 82 L64 74 L96 82 L68 90 Z" fill="url(#ft-board)" stroke="#3fb48a" stroke-width=".6"/>
+<g fill="#e3c27a"><circle cx="52" cy="81" r="1.3"/><circle cx="60" cy="79" r="1.3"/><circle cx="68" cy="81.2" r="1.3"/><circle cx="76" cy="83.4" r="1.3"/></g>
+<path d="M60 82 L70 79.4 L78 81.6 L68 84.2 Z" fill="#11182a"/>
+<g stroke="#e3c27a" stroke-width="1.3"><path d="M52 50 V79.5"/><path d="M60 48 V77.5"/><path d="M68 50 V79.7"/><path d="M76 52 V81.9"/></g>
+<path d="M38 46 L64 38 L94 46 L68 54 Z" fill="url(#ft-mt)"/>
+<path d="M38 46 L68 54 L68 58 L38 50 Z" fill="url(#ft-ml)"/>
+<path d="M68 54 L94 46 L94 50 L68 58 Z" fill="url(#ft-mr)"/>
+<rect x="60" y="14" width="12" height="28" rx="2" fill="url(#ft-lens)"/>
+<rect x="56" y="10" width="20" height="8" rx="2" fill="url(#ft-cam)"/>
+<g stroke="#8d99b0" stroke-width="2"><path d="M30 86 V28 M106 86 V28"/></g>
+<path d="M28 26 H108" stroke="#5d6880" stroke-width="4" stroke-linecap="round"/>
+<rect x="110" y="30" width="44" height="34" rx="4" fill="url(#ft-scr)" stroke="#4a5875"/>
+<path d="M114 50 L119 50 L121 40 L125 58 L129 36 L133 54 L136 47 L150 47" stroke="#6fd3ff" stroke-width="1.4" fill="none" stroke-linejoin="round"/>
+<rect x="114" y="34" width="16" height="6" rx="1.5" fill="#1d8f5f"/>
+<text x="122" y="38.8" text-anchor="middle" font-size="4.6" font-weight="700" fill="#fff" font-family="ui-monospace,Menlo,Consolas,monospace">PASS</text>
+<rect x="128" y="64" width="8" height="10" fill="#2b3448"/><rect x="120" y="73" width="24" height="3" rx="1.5" fill="#2b3448"/>
+</svg>
             <h3>Function Test</h3>
             <p>Electrical, optical and performance tests at line speed.</p>
           </article>
           <article class="card reveal">
-            <span class="no">04</span><svg class="ico" viewBox="0 0 48 48" role="img" aria-label="Automation" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 42h16"/><path d="M14 42v-8l8-10"/><circle cx="22" cy="24" r="3"/><path d="M24 22l10-8"/><circle cx="35" cy="13" r="3"/><path d="M37 16l3 6M33 16l-1 6"/></svg>
+            <span class="no">04</span><svg class="art" viewBox="0 0 160 110" role="img" aria-label="Robot arm picking parts from a conveyor" xmlns="http://www.w3.org/2000/svg"><defs>
+ <linearGradient id="au-mt" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f4f6fa"/><stop offset="1" stop-color="#aeb8ca"/></linearGradient>
+ <linearGradient id="au-ml" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#9aa6bb"/><stop offset="1" stop-color="#6e7a91"/></linearGradient>
+ <linearGradient id="au-mr" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5d6880"/><stop offset="1" stop-color="#46516a"/></linearGradient>
+ <linearGradient id="au-cam" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2b3448"/><stop offset=".5" stop-color="#4a556c"/><stop offset="1" stop-color="#1a2236"/></linearGradient>
+ <linearGradient id="au-lens" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5d6880"/><stop offset=".45" stop-color="#d5dbe6"/><stop offset="1" stop-color="#4a556c"/></linearGradient>
+
+ <linearGradient id="au-arm" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff"/><stop offset=".7" stop-color="#e3e8f1"/><stop offset="1" stop-color="#b9c3d4"/></linearGradient>
+ <linearGradient id="au-belt" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2b3448"/><stop offset="1" stop-color="#151c2c"/></linearGradient>
+ <linearGradient id="au-accent" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#4f86ec"/><stop offset="1" stop-color="#3059a2"/></linearGradient>
+</defs>
+<ellipse cx="84" cy="104" rx="64" ry="4" fill="#000" opacity=".35"/>
+<path d="M50 92 L150 62 L156 66 L56 96 Z" fill="url(#au-belt)"/>
+<path d="M56 96 L156 66 L156 70 L56 100 Z" fill="#4a556c"/>
+<path d="M50 92 L56 96 L56 100 L50 96 Z" fill="#5d6880"/>
+<g stroke="#4a556c" stroke-width=".6"><path d="M70 86 L76 90"/><path d="M90 80 L96 84"/><path d="M110 74 L116 78"/><path d="M130 68 L136 72"/></g>
+<g transform="translate(70 80)"><path d="M0 -4 L8 -6.4 L16 -4 L8 -1.6 Z" fill="#dfe6f2"/><path d="M0 -4 L8 -1.6 L8 4 L0 1.6 Z" fill="#9fb3d8"/><path d="M8 -1.6 L16 -4 L16 1.6 L8 4 Z" fill="#6f8bc4"/></g><g transform="translate(96 73)"><path d="M0 -4 L8 -6.4 L16 -4 L8 -1.6 Z" fill="#dfe6f2"/><path d="M0 -4 L8 -1.6 L8 4 L0 1.6 Z" fill="#9fb3d8"/><path d="M8 -1.6 L16 -4 L16 1.6 L8 4 Z" fill="#6f8bc4"/></g><g transform="translate(122 66)"><path d="M0 -4 L8 -6.4 L16 -4 L8 -1.6 Z" fill="#dfe6f2"/><path d="M0 -4 L8 -1.6 L8 4 L0 1.6 Z" fill="#9fb3d8"/><path d="M8 -1.6 L16 -4 L16 1.6 L8 4 Z" fill="#6f8bc4"/></g>
+<ellipse cx="34" cy="94" rx="18" ry="6" fill="url(#au-mr)"/>
+<path d="M16 94 V88 A18 6 0 0 0 52 88 V94" fill="url(#au-ml)"/>
+<ellipse cx="34" cy="88" rx="18" ry="6" fill="url(#au-mt)"/>
+<path d="M24 86 V74 A10 4 0 0 0 44 74 V86 Z" fill="url(#au-arm)"/>
+<ellipse cx="34" cy="74" rx="10" ry="4" fill="#eef2f8"/>
+<rect x="28" y="70" width="12" height="4" rx="2" fill="url(#au-accent)"/>
+<circle cx="34" cy="64" r="8" fill="#2b3448"/><circle cx="34" cy="64" r="4" fill="url(#au-accent)"/>
+<path d="M28 60 L58 24 L68 30 L40 68 Z" fill="url(#au-arm)" stroke="#b3bdcf" stroke-width=".6"/>
+<circle cx="63" cy="27" r="7" fill="#2b3448"/><circle cx="63" cy="27" r="3.4" fill="url(#au-accent)"/>
+<path d="M60 22 L100 30 L98 38 L60 32 Z" fill="url(#au-arm)" stroke="#b3bdcf" stroke-width=".6"/>
+<circle cx="101" cy="34" r="5" fill="#2b3448"/>
+<rect x="98" y="38" width="7" height="12" rx="1.5" fill="url(#au-lens)"/>
+<path d="M95 50 H108 L108 54 H95 Z" fill="#4a556c"/>
+<path d="M96 54 V60 M107 54 V60" stroke="#8d99b0" stroke-width="2" stroke-linecap="round"/>
+<path d="M101 60 L101 66" stroke="#6fd3ff" stroke-width="1" stroke-dasharray="1.5 1.5"/>
+<circle cx="34" cy="88" r="1.6" fill="#1d8f5f"/>
+</svg>
             <h3>Integrated Automation</h3>
             <p>Assembly, dispensing, fastening and test, in one connected line.</p>
           </article>
@@ -299,12 +425,126 @@ h1 em,h2 em{font-style:normal;background:linear-gradient(90deg,#7fb2ff,var(--cya
       <div class="eyebrow reveal">Industries</div>
       <h2 class="reveal">Where our machines run.</h2>
       <ul class="inds">
-          <li class="reveal"><svg class="ico" viewBox="0 0 48 48" role="img" aria-label="" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="14" y="5" width="20" height="38" rx="4"/><path d="M21 37h6"/></svg><span>Consumer electronics</span></li>
-          <li class="reveal"><svg class="ico" viewBox="0 0 48 48" role="img" aria-label="" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18h36v14a4 4 0 0 1-4 4h-8l-4-5h-4l-4 5h-8a4 4 0 0 1-4-4z"/><circle cx="15" cy="26" r="3"/><circle cx="33" cy="26" r="3"/></svg><span>AR / VR</span></li>
-          <li class="reveal"><svg class="ico" viewBox="0 0 48 48" role="img" aria-label="" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="14" width="32" height="20" rx="3"/><path d="M38 20h4v8h-4"/><path d="M22 17l-4 8h6l-4 8"/></svg><span>EV battery</span></li>
-          <li class="reveal"><svg class="ico" viewBox="0 0 48 48" role="img" aria-label="" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="12" y="14" width="24" height="20" rx="4"/><circle cx="19" cy="24" r="2"/><circle cx="29" cy="24" r="2"/><path d="M24 14V8M21 8h6M12 24H7M41 24h-5M18 40v-6M30 40v-6"/></svg><span>Robotics</span></li>
-          <li class="reveal"><svg class="ico" viewBox="0 0 48 48" role="img" aria-label="" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="13" y="13" width="22" height="22" rx="2"/><rect x="19" y="19" width="10" height="10"/><path d="M18 13V7M24 13V7M30 13V7M18 41v-6M24 41v-6M30 41v-6M13 18H7M13 24H7M13 30H7M41 18h-6M41 24h-6M41 30h-6"/></svg><span>Semiconductor</span></li>
-          <li class="reveal"><svg class="ico" viewBox="0 0 48 48" role="img" aria-label="" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 34l6-20h20l6 20z"/><path d="M11 24h26M20 14l-2 20M28 14l2 20"/><path d="M24 34v8M18 42h12"/></svg><span>Solar</span></li>
+          <li class="reveal"><svg class="ill" viewBox="0 0 120 100" role="img" aria-label="Smartphone, smartwatch and earbuds case" xmlns="http://www.w3.org/2000/svg"><ellipse cx="60" cy="94" rx="40" ry="4" fill="#0e1628" opacity=".12"/>
+<defs>
+ <linearGradient id="ce-body" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2b3448"/><stop offset=".5" stop-color="#11182a"/><stop offset="1" stop-color="#232c40"/></linearGradient>
+ <linearGradient id="ce-scr" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6fd3ff"/><stop offset=".45" stop-color="#3a6fd8"/><stop offset="1" stop-color="#16285a"/></linearGradient>
+ <linearGradient id="ce-case" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#d5dbe6"/></linearGradient>
+ <linearGradient id="ce-glare" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".35"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/></linearGradient>
+</defs>
+<rect x="74" y="15" width="2" height="9" rx="1" fill="#4a556c"/>
+<rect x="38" y="6" width="38" height="82" rx="9" fill="url(#ce-body)"/>
+<rect x="38.6" y="6.6" width="36.8" height="80.8" rx="8.6" fill="none" stroke="#5d6a84" stroke-width="1"/>
+<rect x="41" y="9" width="32" height="76" rx="6.5" fill="url(#ce-scr)"/>
+<path d="M41 40 L73 18 L73 9 L49 9 Q41 9 41 16 Z" fill="url(#ce-glare)"/>
+<rect x="52" y="12" width="10" height="3.4" rx="1.7" fill="#0b1020"/>
+<g fill="#fff" opacity=".85"><rect x="45" y="56" width="11" height="11" rx="3"/><rect x="58" y="56" width="11" height="11" rx="3" opacity=".6"/><rect x="45" y="69" width="11" height="11" rx="3" opacity=".6"/><rect x="58" y="69" width="11" height="11" rx="3"/></g>
+<rect x="12" y="36" width="8" height="10" rx="2" fill="#2b3448"/><rect x="12" y="74" width="8" height="10" rx="2" fill="#2b3448"/>
+<rect x="5" y="44" width="22" height="32" rx="7" fill="url(#ce-body)"/>
+<rect x="8" y="47" width="16" height="26" rx="5" fill="#0b1020"/>
+<circle cx="16" cy="60" r="7" fill="none" stroke="#6fd3ff" stroke-width="2.2" stroke-dasharray="30 14" stroke-linecap="round"/>
+<rect x="27" y="56" width="2" height="6" rx="1" fill="#4a556c"/>
+<rect x="84" y="60" width="30" height="26" rx="11" fill="url(#ce-case)" stroke="#c3cad8"/>
+<path d="M84.5 70 H113.5" stroke="#b8c0cf" stroke-width="1"/>
+<circle cx="99" cy="76" r="1.4" fill="#3a6fd8"/>
+</svg><span>Consumer electronics</span></li>
+          <li class="reveal"><svg class="ill" viewBox="0 0 120 100" role="img" aria-label="Mixed-reality headset" xmlns="http://www.w3.org/2000/svg"><ellipse cx="60" cy="94" rx="44" ry="4" fill="#0e1628" opacity=".12"/>
+<defs>
+ <linearGradient id="vr-visor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#34415e"/><stop offset=".55" stop-color="#121a2c"/><stop offset="1" stop-color="#0a0f1c"/></linearGradient>
+ <linearGradient id="vr-shell" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4f6fa"/><stop offset="1" stop-color="#c9d1df"/></linearGradient>
+ <linearGradient id="vr-glare" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".45"/><stop offset=".55" stop-color="#fff" stop-opacity="0"/></linearGradient>
+ <linearGradient id="vr-led" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#6fd3ff" stop-opacity="0"/><stop offset=".5" stop-color="#6fd3ff"/><stop offset="1" stop-color="#6fd3ff" stop-opacity="0"/></linearGradient>
+</defs>
+<path d="M10 52 Q4 30 30 24 L36 30 Q16 34 18 52 Z" fill="#3b465e"/>
+<path d="M110 52 Q116 30 90 24 L84 30 Q104 34 102 52 Z" fill="#2b3448"/>
+<path d="M38 22 Q60 12 82 22 L80 27 Q60 19 40 27 Z" fill="#4a556c"/>
+<rect x="12" y="30" width="96" height="46" rx="20" fill="url(#vr-shell)"/>
+<rect x="16" y="33" width="88" height="39" rx="17" fill="url(#vr-visor)"/>
+<path d="M20 52 Q22 36 40 35 L70 35 Q40 40 30 66 Q22 64 20 52 Z" fill="url(#vr-glare)"/>
+<rect x="30" y="64" width="60" height="2.2" rx="1.1" fill="url(#vr-led)"/>
+<g fill="#0a0f1c" stroke="#4a5875" stroke-width="1"><circle cx="26" cy="42" r="3"/><circle cx="94" cy="42" r="3"/><circle cx="26" cy="62" r="2.4"/><circle cx="94" cy="62" r="2.4"/></g>
+<circle cx="26" cy="42" r="1" fill="#6fd3ff"/><circle cx="94" cy="42" r="1" fill="#6fd3ff"/>
+<path d="M50 76 Q60 82 70 76" fill="none" stroke="#9aa5ba" stroke-width="2"/>
+</svg><span>AR / VR</span></li>
+          <li class="reveal"><svg class="ill" viewBox="0 0 120 100" role="img" aria-label="EV battery module" xmlns="http://www.w3.org/2000/svg"><ellipse cx="60" cy="94" rx="44" ry="4" fill="#0e1628" opacity=".12"/>
+<defs>
+ <linearGradient id="bt-l" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#4f86ec"/><stop offset="1" stop-color="#3059a2"/></linearGradient>
+ <linearGradient id="bt-r" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#22437f"/><stop offset="1" stop-color="#18305c"/></linearGradient>
+ <linearGradient id="bt-top" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f3f6fb"/><stop offset="1" stop-color="#cfd8e8"/></linearGradient>
+ <radialGradient id="bt-cell" cx=".4" cy=".35" r=".7"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#aab5c9"/></radialGradient>
+</defs>
+<path d="M14 39 L60 62 L60 90 L14 67 Z" fill="url(#bt-l)"/>
+<path d="M60 62 L106 39 L106 67 L60 90 Z" fill="url(#bt-r)"/>
+<path d="M60 16 L106 39 L60 62 L14 39 Z" fill="url(#bt-top)" stroke="#b7c2d6" stroke-width=".8"/>
+<path d="M14 39 L60 62 L106 39" fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="1"/>
+<ellipse cx="58.1" cy="22.7" rx="6.2" ry="3.3" fill="url(#bt-cell)" stroke="#8d99b0" stroke-width=".6"/><ellipse cx="58.1" cy="22.3" rx="2.4" ry="1.3" fill="#ffffff"/><ellipse cx="42.8" cy="30.4" rx="6.2" ry="3.3" fill="url(#bt-cell)" stroke="#8d99b0" stroke-width=".6"/><ellipse cx="42.8" cy="30.0" rx="2.4" ry="1.3" fill="#ffffff"/><ellipse cx="27.4" cy="38.0" rx="6.2" ry="3.3" fill="url(#bt-cell)" stroke="#8d99b0" stroke-width=".6"/><ellipse cx="27.4" cy="37.6" rx="2.4" ry="1.3" fill="#ffffff"/><ellipse cx="69.6" cy="28.5" rx="6.2" ry="3.3" fill="url(#bt-cell)" stroke="#8d99b0" stroke-width=".6"/><ellipse cx="69.6" cy="28.1" rx="2.4" ry="1.3" fill="#ffffff"/><ellipse cx="54.2" cy="36.1" rx="6.2" ry="3.3" fill="url(#bt-cell)" stroke="#8d99b0" stroke-width=".6"/><ellipse cx="54.2" cy="35.7" rx="2.4" ry="1.3" fill="#ffffff"/><ellipse cx="38.9" cy="43.8" rx="6.2" ry="3.3" fill="url(#bt-cell)" stroke="#8d99b0" stroke-width=".6"/><ellipse cx="38.9" cy="43.4" rx="2.4" ry="1.3" fill="#ffffff"/><ellipse cx="81.1" cy="34.2" rx="6.2" ry="3.3" fill="url(#bt-cell)" stroke="#8d99b0" stroke-width=".6"/><ellipse cx="81.1" cy="33.8" rx="2.4" ry="1.3" fill="#ffffff"/><ellipse cx="65.8" cy="41.9" rx="6.2" ry="3.3" fill="url(#bt-cell)" stroke="#8d99b0" stroke-width=".6"/><ellipse cx="65.8" cy="41.5" rx="2.4" ry="1.3" fill="#ffffff"/><ellipse cx="50.4" cy="49.5" rx="6.2" ry="3.3" fill="url(#bt-cell)" stroke="#8d99b0" stroke-width=".6"/><ellipse cx="50.4" cy="49.1" rx="2.4" ry="1.3" fill="#ffffff"/><ellipse cx="92.6" cy="40.0" rx="6.2" ry="3.3" fill="url(#bt-cell)" stroke="#8d99b0" stroke-width=".6"/><ellipse cx="92.6" cy="39.6" rx="2.4" ry="1.3" fill="#ffffff"/><ellipse cx="77.2" cy="47.6" rx="6.2" ry="3.3" fill="url(#bt-cell)" stroke="#8d99b0" stroke-width=".6"/><ellipse cx="77.2" cy="47.2" rx="2.4" ry="1.3" fill="#ffffff"/><ellipse cx="61.9" cy="55.3" rx="6.2" ry="3.3" fill="url(#bt-cell)" stroke="#8d99b0" stroke-width=".6"/><ellipse cx="61.9" cy="54.9" rx="2.4" ry="1.3" fill="#ffffff"/>
+<path d="M38 60 L31 72 H37 L33 82 L44 68 H38 L42 60 Z" fill="#ffffff" opacity=".95"/>
+<g stroke="#6fd3ff" stroke-width="1.2" opacity=".8"><path d="M66 72 L98 56"/><path d="M66 77 L98 61" opacity=".5"/></g>
+</svg><span>EV battery</span></li>
+          <li class="reveal"><svg class="ill" viewBox="0 0 120 100" role="img" aria-label="Humanoid robot" xmlns="http://www.w3.org/2000/svg"><ellipse cx="60" cy="94" rx="26" ry="4" fill="#0e1628" opacity=".12"/>
+<defs>
+ <linearGradient id="rb-shell" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff"/><stop offset=".6" stop-color="#e3e8f1"/><stop offset="1" stop-color="#b9c3d4"/></linearGradient>
+ <linearGradient id="rb-dark" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#3b465e"/><stop offset="1" stop-color="#1a2236"/></linearGradient>
+ <linearGradient id="rb-visor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1d2a47"/><stop offset="1" stop-color="#070b14"/></linearGradient>
+</defs>
+<rect x="49" y="66" width="22" height="9" rx="3" fill="url(#rb-dark)"/>
+<rect x="49" y="74" width="9" height="12" rx="3.5" fill="url(#rb-shell)" stroke="#b3bdcf" stroke-width=".6"/>
+<rect x="62" y="74" width="9" height="12" rx="3.5" fill="url(#rb-shell)" stroke="#b3bdcf" stroke-width=".6"/>
+<circle cx="53.5" cy="86.5" r="2.6" fill="#2b3448"/><circle cx="66.5" cy="86.5" r="2.6" fill="#2b3448"/>
+<rect x="50" y="87" width="7" height="5" rx="2" fill="url(#rb-shell)"/><rect x="63" y="87" width="7" height="5" rx="2" fill="url(#rb-shell)"/>
+<rect x="48" y="91" width="11" height="3.4" rx="1.7" fill="#2b3448"/><rect x="61" y="91" width="11" height="3.4" rx="1.7" fill="#2b3448"/>
+<rect x="56.5" y="27" width="7" height="6" rx="2" fill="url(#rb-dark)"/>
+<path d="M42 35 Q60 30 78 35 L75 56 Q60 62 45 56 Z" fill="url(#rb-shell)" stroke="#b3bdcf" stroke-width=".7"/>
+<path d="M48 40 Q60 37 72 40 L70.5 50 Q60 53 49.5 50 Z" fill="none" stroke="#c4ccda" stroke-width=".8"/>
+<rect x="56" y="42" width="8" height="3" rx="1.5" fill="#6fd3ff"/>
+<path d="M46 56 Q60 61 74 56 L72 66 H48 Z" fill="url(#rb-dark)"/>
+<circle cx="40" cy="38" r="5" fill="url(#rb-dark)"/><circle cx="80" cy="38" r="5" fill="url(#rb-dark)"/>
+<rect x="34" y="41" width="8" height="15" rx="4" fill="url(#rb-shell)" stroke="#b3bdcf" stroke-width=".6" transform="rotate(8 38 48)"/>
+<rect x="78" y="41" width="8" height="15" rx="4" fill="url(#rb-shell)" stroke="#b3bdcf" stroke-width=".6" transform="rotate(-8 82 48)"/>
+<circle cx="35.6" cy="57" r="2.6" fill="#2b3448"/><circle cx="84.4" cy="57" r="2.6" fill="#2b3448"/>
+<rect x="31" y="58" width="7.5" height="12" rx="3.5" fill="url(#rb-shell)" stroke="#b3bdcf" stroke-width=".6" transform="rotate(4 35 64)"/>
+<rect x="81.5" y="58" width="7.5" height="12" rx="3.5" fill="url(#rb-shell)" stroke="#b3bdcf" stroke-width=".6" transform="rotate(-4 85 64)"/>
+<path d="M31.5 70 q2 5 6 1 M82.5 70 q2 5 6 0" fill="#2b3448" stroke="#2b3448" stroke-width="2.4" stroke-linecap="round"/>
+<rect x="47" y="5" width="26" height="23" rx="10" fill="url(#rb-shell)" stroke="#b3bdcf" stroke-width=".7"/>
+<rect x="50" y="11" width="20" height="10" rx="5" fill="url(#rb-visor)"/>
+<rect x="53" y="15" width="5" height="2.2" rx="1.1" fill="#6fd3ff"/><rect x="62" y="15" width="5" height="2.2" rx="1.1" fill="#6fd3ff"/>
+<path d="M51 12.5 Q55 11 60 11" stroke="#fff" stroke-opacity=".35" stroke-width="1" fill="none"/>
+</svg><span>Robotics</span></li>
+          <li class="reveal"><svg class="ill" viewBox="0 0 120 100" role="img" aria-label="Silicon wafer and chip" xmlns="http://www.w3.org/2000/svg"><ellipse cx="60" cy="94" rx="40" ry="4" fill="#0e1628" opacity=".12"/>
+<defs>
+ <linearGradient id="sc-w" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#b9c9ff"/><stop offset=".3" stop-color="#8d7ff0"/><stop offset=".55" stop-color="#4f86ec"/><stop offset=".8" stop-color="#6fd3ff"/><stop offset="1" stop-color="#2b4fa8"/></linearGradient>
+ <radialGradient id="sc-sheen" cx=".35" cy=".3" r=".55"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+ <clipPath id="sc-clip"><path d="M48 88 A40 40 0 1 1 72 88 Z"/></clipPath>
+ <linearGradient id="sc-chip" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b465e"/><stop offset="1" stop-color="#121a2c"/></linearGradient>
+</defs>
+<path d="M48 88 A40 40 0 1 1 72 88 Z" fill="url(#sc-w)"/>
+<g clip-path="url(#sc-clip)" stroke="#ffffff" stroke-opacity=".38" stroke-width=".7" fill="none"><path d="M20 6 V92"/><path d="M28 6 V92"/><path d="M36 6 V92"/><path d="M44 6 V92"/><path d="M52 6 V92"/><path d="M60 6 V92"/><path d="M68 6 V92"/><path d="M76 6 V92"/><path d="M84 6 V92"/><path d="M92 6 V92"/><path d="M100 6 V92"/><path d="M14 12 H106"/><path d="M14 20 H106"/><path d="M14 28 H106"/><path d="M14 36 H106"/><path d="M14 44 H106"/><path d="M14 52 H106"/><path d="M14 60 H106"/><path d="M14 68 H106"/><path d="M14 76 H106"/><path d="M14 84 H106"/></g>
+<path d="M48 88 A40 40 0 1 1 72 88 Z" fill="url(#sc-sheen)"/>
+<path d="M48 88 A40 40 0 1 1 72 88 Z" fill="none" stroke="#e6ecff" stroke-width="1.2"/>
+<g transform="translate(80 62)">
+ <g fill="#d9b25a"><rect x="-3" y="4" width="3" height="2"/><rect x="-3" y="9" width="3" height="2"/><rect x="-3" y="14" width="3" height="2"/><rect x="-3" y="19" width="3" height="2"/>
+ <rect x="26" y="4" width="3" height="2"/><rect x="26" y="9" width="3" height="2"/><rect x="26" y="14" width="3" height="2"/><rect x="26" y="19" width="3" height="2"/>
+ <rect x="4" y="-3" width="2" height="3"/><rect x="9" y="-3" width="2" height="3"/><rect x="14" y="-3" width="2" height="3"/><rect x="19" y="-3" width="2" height="3"/>
+ <rect x="4" y="26" width="2" height="3"/><rect x="9" y="26" width="2" height="3"/><rect x="14" y="26" width="2" height="3"/><rect x="19" y="26" width="2" height="3"/></g>
+ <rect x="0" y="0" width="26" height="26" rx="3" fill="url(#sc-chip)" stroke="#5d6a84"/>
+ <rect x="7" y="7" width="12" height="12" rx="1.5" fill="none" stroke="#6fd3ff" stroke-width="1.2"/>
+ <circle cx="4" cy="4" r="1.2" fill="#9aa5ba"/>
+</g>
+</svg><span>Semiconductor</span></li>
+          <li class="reveal"><svg class="ill" viewBox="0 0 120 100" role="img" aria-label="Solar panel" xmlns="http://www.w3.org/2000/svg"><ellipse cx="60" cy="94" rx="46" ry="4" fill="#0e1628" opacity=".12"/>
+<defs>
+ <radialGradient id="so-sun" cx=".4" cy=".4" r=".6"><stop offset="0" stop-color="#fff3c4"/><stop offset=".6" stop-color="#ffc24a"/><stop offset="1" stop-color="#ff9d2e"/></radialGradient>
+ <linearGradient id="so-p" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4f86ec"/><stop offset=".55" stop-color="#22437f"/><stop offset="1" stop-color="#132a57"/></linearGradient>
+ <linearGradient id="so-glare" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".4"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/></linearGradient>
+</defs>
+<g stroke="#ffb340" stroke-width="2" stroke-linecap="round"><path d="M112.0 18.0 L117.0 18.0"/><path d="M107.6 28.6 L111.1 32.1"/><path d="M97.0 33.0 L97.0 38.0"/><path d="M86.4 28.6 L82.9 32.1"/><path d="M82.0 18.0 L77.0 18.0"/><path d="M86.4 7.4 L82.9 3.9"/><path d="M97.0 3.0 L97.0 -2.0"/><path d="M107.6 7.4 L111.1 3.9"/></g>
+<circle cx="97" cy="18" r="10" fill="url(#so-sun)"/>
+<path d="M44 82 L42 93 M88 70 L90 92" stroke="#8d99b0" stroke-width="3" stroke-linecap="round"/>
+<path d="M12 52 L82 34 L108 66 L30 88 Z" fill="#c9d1df" transform="translate(0 2.5)"/>
+<path d="M12 52 L82 34 L108 66 L30 88 Z" fill="url(#so-p)" stroke="#dfe6f2" stroke-width="1.6" stroke-linejoin="round"/>
+<g stroke="#cfe0ff" stroke-opacity=".55" stroke-width=".8" fill="none"><path d="M23.7 49.0 L43.0 84.3"/><path d="M35.3 46.0 L56.0 80.7"/><path d="M47.0 43.0 L69.0 77.0"/><path d="M58.7 40.0 L82.0 73.3"/><path d="M70.3 37.0 L95.0 69.7"/><path d="M16.5 61.0 L88.5 42.0"/><path d="M21.0 70.0 L95.0 50.0"/><path d="M25.5 79.0 L101.5 58.0"/></g>
+<path d="M12 52 L82 34 L90 44 L22 64 Z" fill="url(#so-glare)"/>
+</svg><span>Solar</span></li>
       </ul>
     </div>
   </section>
