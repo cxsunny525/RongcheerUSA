@@ -73,7 +73,7 @@ h1 em,h2 em{font-style:normal;background:linear-gradient(90deg,#7fb2ff,var(--cya
 #p2{background:var(--light);color:var(--dark-text)}
 #p2 .eyebrow{color:var(--blue)}
 .trusted{margin-top:6px;display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 26px;font-size:clamp(34px,10vw,72px);font-weight:700;letter-spacing:-.035em;color:var(--dark-text)}
-.trusted span{opacity:.92}
+.trusted .lg{display:inline-flex;align-items:center;min-height:1.2em}.trusted .lg img{height:clamp(30px,8.4vw,52px);width:auto;max-width:42vw;filter:grayscale(1) brightness(.25);opacity:.9}.trusted .lg b{display:none;font-weight:700;opacity:.92}.trusted .lg.nf img{display:none}.trusted .lg.nf b{display:inline}
 .trusted small{font-size:clamp(14px,3.8vw,17px);font-weight:500;letter-spacing:0;color:var(--dark-muted);flex-basis:100%;margin-top:4px}
 .stats{display:grid;grid-template-columns:1fr 1fr;margin-top:34px;border-top:1px solid #d5ddea}
 .stat{padding:18px 0 4px}
@@ -234,7 +234,11 @@ h1 em,h2 em{font-style:normal;background:linear-gradient(90deg,#7fb2ff,var(--cya
   <section class="page" id="p2">
     <div class="wrap">
       <div class="eyebrow reveal">Proven at scale</div>
-      <div class="trusted reveal"><small>Trusted by global technology leaders</small><span>Apple</span><span>Meta</span><span>Amazon</span></div>
+      <div class="trusted reveal"><small>Trusted by global technology leaders</small>
+        <span class="lg"><img src="assets/logos/apple.svg" alt="Apple" onerror="this.parentNode.className+=' nf'"><b>Apple</b></span>
+        <span class="lg"><img src="assets/logos/meta.svg" alt="Meta" onerror="this.parentNode.className+=' nf'"><b>Meta</b></span>
+        <span class="lg"><img src="assets/logos/amazon.svg" alt="Amazon" onerror="this.parentNode.className+=' nf'"><b>Amazon</b></span>
+      </div>
       <div class="stats">
         <div class="stat reveal"><b>98&ndash;99<small>%</small></b><span>OEE on delivered systems</span></div>
         <div class="stat reveal"><b>&micro;m</b><span>Measurement precision</span></div>
